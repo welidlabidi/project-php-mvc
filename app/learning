@@ -1,0 +1,59 @@
+class User {
+    private $name;
+    public $age ;
+    public static $minPassLenght = 6;
+
+    public function __construct($name,$age){
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    public function setName(){
+        return $this->name;
+    }
+
+    public function getName($name){
+        return $this->name = $name;
+    }
+
+
+
+public function __get($property){
+    if(property_exists($this,$property)){
+        return $this->$property;
+    }
+}
+
+public function __set($property, $value){
+    if(property_exists($this,$property)){
+        return $this->$property = $value;
+    }
+}
+
+public static function validationPass($pass){
+    if(strlen($pass)>= self::$minPassLenght){
+        return true;
+    }else{
+        return false;
+    }
+} 
+
+}
+
+$user = new User("welid ", 30);
+/* echo "<br>";
+echo $user->age;
+echo $user->__get("name"); */
+echo $user->__set("omar", 23 );
+echo "<br>";
+echo "<br>";
+echo $user->setName("omar");
+echo $user->getName("tom");
+
+$password = "hello123";
+
+if(User::validationPass($password)){
+echo "Password valid";
+}else{
+    echo "password NOT valid";
+}
