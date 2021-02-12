@@ -11,9 +11,9 @@ class Pages extends Controller
     public function index()
     {
 
-
         $data = [
             'title' => 'Posts',
+            'description' => 'Building a social network with PHP framework'
 
         ];
 
@@ -23,7 +23,18 @@ class Pages extends Controller
     public function about()
     {
         $data = [
-            'title' => 'About Us'
+            'title' => 'About Us',
+            'description' => 'App to share posts with other users'
+
+        ];
+        $this->view('about', $data);
+    }
+    public function register()
+    {
+        $data = [
+            'title' => 'register',
+            'description' => 'register form'
+
         ];
         $this->view('about', $data);
     }

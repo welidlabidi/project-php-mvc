@@ -10,3 +10,5 @@ define('APPROOT', dirname(dirname(__FILE__)));
 define('URLROOT', 'http://localhost/oopphp');
 // site name
 define("SITENAME", "oopphp");
+// App Version
+define('APPVERSION', '1.0.0');
