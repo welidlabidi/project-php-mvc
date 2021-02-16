@@ -16,11 +16,15 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['user_id'])) : ?>
-                <a class="nav-link" aria-current="page" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
-                <?php echo 'hallo' . $_SESSION['user_name']; ?>
+                <li class="nav-item">
+                    <a class="nav-link">Welcome <?php echo $_SESSION['user_name']; ?></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
+                </li>
                 <?php else : ?>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?php echo URLROOT; ?>/users/register">Register</a>
+                    <a class="nav-link" href="<?php echo URLROOT; ?>/users/register">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
