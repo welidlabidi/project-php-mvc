@@ -18,7 +18,7 @@
         <div class="card card-body mb-3">
             Written by <?php echo $post->name; ?> on <?php echo $post->postCreated; ?>
         </div>
-        <a href="<?php echo URLROOT; ?>/posts/show/<?php $post->postId; ?>" class="btn btn-dark">More</a>
+        <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="btn btn-dark">More</a>
     </div>
     <?php endforeach; ?>
     <?php require APPROOT . '/views/inc/footer.php'; ?>
